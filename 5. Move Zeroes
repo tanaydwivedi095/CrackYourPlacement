@@ -1,0 +1,13 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int rPtr = 0;
+        for(int lPtr=0; lPtr<nums.length; lPtr++){
+            if(nums[lPtr]!=0){
+                int temp = nums[lPtr];
+                nums[lPtr] = nums[rPtr];
+                nums[rPtr] = temp;
+                rPtr++;
+            }
+        }
+    }
+}
